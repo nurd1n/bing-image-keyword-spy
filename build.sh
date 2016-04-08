@@ -6,6 +6,6 @@ cat result/keywordbing.txt > deletekeywordbing.txt
 cat result/keyword-how.txt > deletekeyword-how.txt
 ./start2.sh
 cat deletekeywordbing.txt | sort | uniq >> deletekeyword-how.txt
-cat deletekeywordbing.txt | sort | uniq | sed -e '/How /d' -e '/how /d' -e '/HOW/ d' -e '/can you /d' -e '/what /d' -e '/where /d' -e '/www /d' -e '/www./d' -e '/youtube/d' -e '/youtube /d' -e '/adult/d' -e '/sex/d' -e '/ gay /d' -e '/.com /d' | sed -e "s/\'//g" -e 's/\"//g' -e 's/\&/and/g' -e 's/-/ /g' > result/keywordbing.txt
+cat deletekeywordbing.txt | sort | uniq | sed -e '/How /d' -e '/how /d' -e '/HOW/ d' -e '/can you /d' -e '/what /d' -e '/where /d' -e '/www /d' -e '/www./d' -e '/youtube/d' -e '/youtube /d' -e '/YouTube /d' -e '/adult/d' -e '/sex/d' -e '/ gay /d' -e '/.com /d' | sed -e "s/\'//g" -e 's/\"//g' -e 's/\&/and/g' -e 's/-/ /g' > result/keywordbing.txt
 cat deletekeyword-how.txt | sort | uniq | grep 'How \|how \|HOW' > result/keyword-how.txt
 rm -f delete*
